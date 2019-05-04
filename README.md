@@ -28,5 +28,5 @@ Since current codebase has proto buffer compiler already setup in POM, no need t
 Run gRPC server use following command
 
 ```
-3) mvn -DskipTests package exec:java -Dexec.mainClass=com.anand.grpc.App
+3) mvn clean package exec:java -Dexec.mainClass=com.anand.grpc.App
 ```
