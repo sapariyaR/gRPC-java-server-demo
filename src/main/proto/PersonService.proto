@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package com.anand.grpc;
+import "UserService.proto";
+
+message Person{
+	string id = 1;
+	string name = 2;
+	User user = 3;
+}
+
+message AddPersonRequest{
+	string name = 1;
+	User user = 2;
+	message Response {
+		Person person = 1;
+	}
+}
+
+service PersonService {
+	rpc addPerson (AddPersonRequest) returns (AddPersonRequest.Response);
+}
